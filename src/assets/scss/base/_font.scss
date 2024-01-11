@@ -40,8 +40,60 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Inter Tight';
+  src: local('Inter Tight Semi Bold'), local('InterTight-SemiBold'), url('/fonts/InterTight-SemiBold.woff2') format('woff2'),
+    url('/fonts/InterTight-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter Semi Bold'), local('Inter-SemiBold'), url('/fonts/Inter-SemiBold.woff2') format('woff2'),
+    url('/fonts/Inter-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Baikal Ultra Condensed';
+  src: local('Baikal Ultra Condensed Black'), local('Baikal-UltraCondensedBlack'), url('/fonts/Baikal-UltraCondensedBlack.woff2') format('woff2'),
+    url('/fonts/Baikal-UltraCondensedBlack.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Baikal Ultra Condensed';
+  src: local('Baikal Ultra Condensed Medium'), local('Baikal-UltraCondensedMedium'), url('/fonts/Baikal-UltraCondensedMedium.woff2') format('woff2'),
+    url('/fonts/Baikal-UltraCondensedMedium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Editorial New";
+  src: url("/fonts/EditorialNew.woff2") format("woff2 supports variations"),
+    url("/fonts/EditorialNew.woff2") format("woff2-variations");
+  font-weight: 100 900;
+}
+
+
+
+
+:root {
+  --font-fallback: BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-sans;
+}
+
 body {
-  font-family: var(--font-family-default);
+  font-family: var(--font-family-default), var(--font-fallback);
   text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
   text-rendering: optimizeLegibility;
   font-synthesis: none;
@@ -134,6 +186,7 @@ body {
     @include breakpoint(medium) {
       font-size: 1.25rem;
       line-height: 1.875rem;
+
       h6 {
         font-size: 1rem;
       }
@@ -145,5 +198,24 @@ body {
       font-size: 1.125rem;
       line-height: 1.6875rem;
     }
+  }
+
+  .intro {
+    font-family: var(--font-family-serif);
+    font-size: 3rem;
+    font-weight: 375;
+    font-variation-settings: "wght" 375;
+    line-height: 1;
+
+  }
+
+  .lead {
+    font-family: var(--font-family-default);
+    font-size: 1.125rem;
+    font-weight: bold;
+  }
+
+  .small {
+    font-size: 0.875rem;
   }
 }

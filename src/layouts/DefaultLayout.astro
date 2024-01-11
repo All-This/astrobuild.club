@@ -1,17 +1,17 @@
 ---
-import '@astrojs/tailwind/base.css'
-import '../assets/scss/globals.scss'
-import SiteMeta from '../components/SiteMeta.astro'
-import Header from '../components/Header.astro'
-import Footer from '../components/Footer.astro'
+import "@astrojs/tailwind/base.css";
+import "../assets/scss/globals.scss";
+import SiteMeta from "../components/SiteMeta.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 
 const {
-  title = 'Astro',
-  description = 'A starter project with accessibility features using Astro static site builder. Contains accessible landmarks, skip links, a dark mode color scheme, better focus outline and keyboard menu navigation.',
+  title = "Astro Build Club • astrobuild.club",
+  description = "...",
   url,
-  image = '/social-preview-image.png',
-  author = 'Mark Teekman',
-} = Astro.props
+  image = "/social-preview-image.png",
+  author = "All This",
+} = Astro.props;
 ---
 
 <html lang="en" dir="ltr">
@@ -27,8 +27,10 @@ const {
       title={title}
       description={description.substring(0, 100)}
       url={Astro.site
-        ? `${Astro.site}/${title.toLowerCase().replaceAll(' ', '-')}`
-        : `https://accessible-astro.dev/${title.toLowerCase().replaceAll(' ', '-')}`}
+        ? `${Astro.site}/${title.toLowerCase().replaceAll(" ", "-")}`
+        : `https://accessible-astro.dev/${title
+            .toLowerCase()
+            .replaceAll(" ", "-")}`}
       image={image}
       author={author}
     />
@@ -46,8 +48,9 @@ const {
         --radius-large: 6px;
         --gap-default: 2rem;
         --font-measure: 70ch;
-        --font-family-default: 'Open Sans', sans-serif;
-        --font-family-special: 'Open Sans', sans-serif;
+        --font-family-default: "Inter", sans-serif;
+        --font-family-special: "Baikal Ultra Condensed", sans-serif;
+        --font-family-serif: "Editorial New", serif;
         // light theme
         --font-color: var(--neutral-900);
         --action-color: var(--primary-300);
