@@ -4,6 +4,7 @@ import "../assets/scss/globals.scss";
 import SiteMeta from "../components/SiteMeta.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import Newsletter from "../components/Newsletter.astro";
 
 const {
   title = "Astro Build Club • astrobuild.club",
@@ -40,6 +41,7 @@ const {
     <main id="main-content" transition:animate="fade">
       <slot />
     </main>
+    <Newsletter />
     <Footer />
     <style lang="scss" is:global>
       // theme settings

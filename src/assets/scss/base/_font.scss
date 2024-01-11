@@ -140,16 +140,17 @@ body {
     font-family: var(--font-family-special);
   }
 
-  h1,
-  h2 {
+  h1 {
     font-weight: 800;
   }
 
+  h2,
   h3,
   h4,
   h5,
   h6 {
-    font-weight: 600;
+    font-weight: 500;
+    text-transform: uppercase;
   }
 
   h1 {
