@@ -9,11 +9,11 @@ const { src = "/astro-character-example.png" } = Astro.props;
     <div class="relative grid grid-cols-1 items-center gap-24 lg:grid-cols-1">
       <div class="flex flex-col items-center gap-8 md:items-start">
         <h1 class="text-6xl lg:text-8xl">
-          <slot><span class="text-gradient">Astro</span> Build Club</slot>
+          <slot><span>Astro</span> Build Club</slot>
         </h1>
       </div>
       <img
-        class="character hidden lg:block"
+        class="character z-10 hidden mix-blend-multiply lg:block"
         src={src}
         alt=""
         decoding="async"
@@ -25,10 +25,10 @@ const { src = "/astro-character-example.png" } = Astro.props;
 <style lang="scss">
   h1 {
     font-family: var(--font-family-special);
-    font-size: 35vw;
+    font-size: 32vw;
     font-weight: 500;
     text-transform: uppercase;
-    line-height: 0.8;
+    line-height: 0.75;
   }
   h1 span {
     font-size: 45vw;
@@ -56,11 +56,11 @@ const { src = "/astro-character-example.png" } = Astro.props;
     -webkit-text-fill-color: transparent;
   }
 
-  .character {
-    mix-blend-mode: multiply;
+  img.character {
     position: absolute;
-    bottom: 0px;
-    right: 10px;
-    width: 40vw;
+
+    bottom: -8vw;
+    right: 10vw;
+    width: 30vw;
   }
 </style>

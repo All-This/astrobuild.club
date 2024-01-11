@@ -90,6 +90,19 @@
 :root {
   --font-fallback: BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-sans;
+  --fs-2xs: clamp(0.51rem, 0.01vw + 0.51rem, 0.53rem);
+  --fs-xs: clamp(0.64rem, 0.08vw + 0.62rem, 0.75rem);
+  --fs-sm: clamp(0.8rem, 0.19vw + 0.75rem, 1.06rem);
+  --fs-base: clamp(1rem, 0.37vw + 0.91rem, 1.5rem);
+  --fs-md: clamp(1.25rem, 0.65vw + 1.09rem, 2.12rem);
+  --fs-lg: clamp(1.56rem, 1.06vw + 1.3rem, 3rem);
+  --fs-xl: clamp(1.95rem, 1.69vw + 1.53rem, 4.24rem);
+  --fs-2xl: clamp(2.44rem, 2.63vw + 1.78rem, 6rem);
+  --fs-3xl: clamp(3.05rem, 4.02vw + 2.05rem, 8.48rem);
+  --fs-4xl: clamp(3.81rem, 6.06vw + 2.3rem, 11.99rem);
+  --fs-5xl: clamp(4.77rem, 9.03vw + 2.51rem, 16.95rem);
+  --fs-6xl: clamp(5.96rem, 13.34vw + 2.63rem, 23.97rem);
+  /* https: //www.fluid-type-scale.com/calculate?minFontSize=16&minWidth=400&minRatio=1.25&maxFontSize=24&maxWidth=2560&maxRatio=1.414&steps=2xs%2Cxs%2Csm%2Cbase%2Cmd%2Clg%2Cxl%2C2xl%2C3xl%2C4xl%2C5xl%2C6xl&baseStep=base&prefix=fs&decimals=2&useRems=on&remValue=16&previewFont=Inter&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground&previewWidth=1915 */
 }
 
 body {
@@ -97,7 +110,7 @@ body {
   text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
   text-rendering: optimizeLegibility;
   font-synthesis: none;
-  font-size: 1rem;
+  font-size: var(--fs-base);
   line-height: 1.5rem;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
@@ -202,20 +215,23 @@ body {
 
   .intro {
     font-family: var(--font-family-serif);
-    font-size: 3rem;
+    font-size: 3em;
     font-weight: 375;
     font-variation-settings: "wght" 375;
     line-height: 1;
+    text-wrap: balance;
 
   }
 
   .lead {
     font-family: var(--font-family-default);
-    font-size: 1.125rem;
+    // font-size: 1.125rem;
     font-weight: bold;
+    text-wrap: pretty;
   }
 
   .small {
     font-size: 0.875rem;
+    text-wrap: pretty;
   }
 }
