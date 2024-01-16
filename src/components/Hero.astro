@@ -1,7 +1,7 @@
 ---
 import { Icon } from "astro-icon";
 
-const { src = "/astro-character-example.png" } = Astro.props;
+const { src = "/astroclub-boy.svg" } = Astro.props;
 ---
 
 <section class="hero my-24">
@@ -12,12 +12,7 @@ const { src = "/astro-character-example.png" } = Astro.props;
           <slot><span>Astro</span> Build Club</slot>
         </h1>
       </div>
-      <img
-        class="character z-10 mix-blend-multiply lg:block"
-        src={src}
-        alt=""
-        decoding="async"
-      />
+      <img class="character z-10 lg:block" src={src} alt="" decoding="async" />
     </div>
   </div>
 </section>
@@ -59,8 +54,9 @@ const { src = "/astro-character-example.png" } = Astro.props;
   img.character {
     position: absolute;
 
-    bottom: -8vw;
+    bottom: -6vw;
     right: 10vw;
     width: 30vw;
+    z-index: 500;
   }
 </style>

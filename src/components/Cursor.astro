@@ -1,0 +1,39 @@
+<div class="cursor-dot-outline"></div>
+<div class="cursor-dot"></div>
+
+<script src="../assets/js/scripts.js"></script>
+
+<style lang="scss" is:global>
+  html,
+  body {
+    cursor: none;
+    cursor: url("cursor.svg"), url(".cursor.png"), auto;
+  }
+
+  a:hover {
+    cursor: url("cursor.svg");
+  }
+  .cursor-dot,
+  .cursor-dot-outline {
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+  .cursor-dot {
+    width: 1rem;
+    height: 1rem;
+    background-color: #111;
+  }
+
+  .cursor-dot-outline {
+    width: 2rem;
+    height: 2rem;
+    background-color: #f9a4cedf;
+  }
+</style>
