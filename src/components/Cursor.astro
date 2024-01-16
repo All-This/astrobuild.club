@@ -7,12 +7,15 @@
   html,
   body {
     cursor: none;
-    cursor: url("cursor.svg"), url(".cursor.png"), auto;
+    cursor: url(./cursor.svg) 24 24, url(./cursor.png) 200 200,
+      url(cursor.cur) 5 5, auto;
   }
 
   a:hover {
-    cursor: url("cursor.svg");
+    cursor: url(./cursor-hover.svg) 16 16, url(./cursor-hover.png) 200 200,
+      url(cursor.cur) 5 5, auto;
   }
+
   .cursor-dot,
   .cursor-dot-outline {
     pointer-events: none;
