@@ -14,7 +14,7 @@ const { src = "/astroclub-boy.svg" } = Astro.props;
             <span class="sm:inline-block md:inline-block lg:inline-block"
               >Build</span
             >
-            <span class="sm:inline-block md:inline-block lg:inline-block"
+            <span class="club sm:inline-block md:inline-block lg:inline-block"
               >Club</span
             ></slot
           >
@@ -32,16 +32,16 @@ const { src = "/astroclub-boy.svg" } = Astro.props;
 
 <style lang="scss">
   @use "../assets/scss/base/breakpoint" as *;
+  h1 span.large {
+    font-size: 45vw;
+    font-weight: 900;
+  }
   h1 {
     font-family: var(--font-family-special);
     font-size: 45vw;
     font-weight: 500;
     text-transform: uppercase;
     line-height: 0.75;
-  }
-  h1 span.large {
-    font-size: 45vw;
-    font-weight: 900;
   }
 
   h1 span {
@@ -77,11 +77,11 @@ const { src = "/astroclub-boy.svg" } = Astro.props;
     z-index: 500;
   }
   @include breakpoint(small) {
-    h1 {
-      font-size: 80vw;
-    }
     h1 span.large {
       font-size: 45vw;
+    }
+    h1 {
+      font-size: 80vw;
     }
   }
 
@@ -99,6 +99,9 @@ const { src = "/astroclub-boy.svg" } = Astro.props;
       right: -1vw;
       width: 30vw;
       z-index: 500;
+    }
+    .club {
+      transform: rotate(0deg);
     }
   }
 </style>
