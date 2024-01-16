@@ -8,26 +8,43 @@ const { src = "/astroclub-boy.svg" } = Astro.props;
   <div class="stretch container">
     <div class="relative grid grid-cols-1 items-center gap-24 lg:grid-cols-1">
       <div class="flex flex-col items-center gap-8 md:items-start">
-        <h1 class="text-6xl lg:text-8xl">
-          <slot><span>Astro</span> Build Club</slot>
+        <h1 class="flex flex-wrap sm:flex-col sm:gap-1 md:flex-row lg:block">
+          <slot
+            ><span class="large">Astro</span>
+            <span class="sm:inline-block md:inline-block lg:inline-block"
+              >Build</span
+            >
+            <span class="sm:inline-block md:inline-block lg:inline-block"
+              >Club</span
+            ></slot
+          >
         </h1>
       </div>
-      <img class="character z-10 lg:block" src={src} alt="" decoding="async" />
+      <img
+        class="character z-10 lg:block"
+        src={src}
+        alt="Astro Boy"
+        decoding="async"
+      />
     </div>
   </div>
 </section>
 
 <style lang="scss">
+  @use "../assets/scss/base/breakpoint" as *;
   h1 {
     font-family: var(--font-family-special);
-    font-size: 32vw;
+    font-size: 45vw;
     font-weight: 500;
     text-transform: uppercase;
     line-height: 0.75;
   }
-  h1 span {
+  h1 span.large {
     font-size: 45vw;
     font-weight: 900;
+  }
+
+  h1 span {
   }
   .text-gradient {
     background: linear-gradient(
@@ -54,9 +71,34 @@ const { src = "/astroclub-boy.svg" } = Astro.props;
   img.character {
     position: absolute;
 
-    bottom: -6vw;
-    right: 10vw;
-    width: 30vw;
+    bottom: 2vw;
+    right: -6vw;
+    width: 50vw;
     z-index: 500;
+  }
+  @include breakpoint(small) {
+    h1 {
+      font-size: 80vw;
+    }
+    h1 span.large {
+      font-size: 45vw;
+    }
+  }
+
+  @include breakpoint(medium) {
+    h1 {
+      font-size: 42vw;
+    }
+    h1 span.large {
+      font-size: 45vw;
+    }
+    img.character {
+      position: absolute;
+
+      bottom: 0vw;
+      right: -4vw;
+      width: 30vw;
+      z-index: 500;
+    }
   }
 </style>
