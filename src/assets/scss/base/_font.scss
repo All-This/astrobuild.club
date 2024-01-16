@@ -79,9 +79,11 @@
 
 @font-face {
   font-family: "Editorial New";
-  src: url("/fonts/EditorialNew.woff2") format("woff2 supports variations"),
-    url("/fonts/EditorialNew.woff2") format("woff2-variations");
-  font-weight: 100 900;
+  src: local('BEditorial New'), local('EditorialNew'), url('/fonts/EditorialNew-Regular.woff2') format('woff2'),
+    url('/fonts/EditorialNew-Regular.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
 
@@ -216,7 +218,7 @@ body {
 
   .intro {
     font-family: var(--font-family-serif);
-    font-size: 3em;
+    // font-size: 3em;
     font-weight: 375;
     font-variation-settings: "wght" 375;
     line-height: 1;
