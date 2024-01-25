@@ -125,3 +125,4 @@ var cursor = {
 }
 
 cursor.init();  
+

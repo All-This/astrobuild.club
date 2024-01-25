@@ -5,6 +5,7 @@ import SiteMeta from "../components/SiteMeta.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Newsletter from "../components/Newsletter.astro";
+import Cursor from "../components/Cursor.astro";
 
 const {
   title = "Astro Build Club • astrobuild.club",
@@ -47,6 +48,7 @@ const {
     />
   </head>
   <body>
+    <Cursor />
     <Header />
     <main id="main-content" transition:animate="fade">
       <slot />

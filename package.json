@@ -31,6 +31,8 @@
     "tailwindcss": "^3.2.7"
   },
   "dependencies": {
+    "@rive-app/canvas": "^2.9.2",
+    "@rive-app/react-canvas-lite": "^4.7.1",
     "tailwindcss-fluid-type": "^2.0.3"
   }
 }

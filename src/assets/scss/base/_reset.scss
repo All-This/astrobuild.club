@@ -12,6 +12,14 @@ html {
     body * {
       animation-duration: 0s !important;
       animation-delay: 0s !important;
+      cursor: auto;
+    }
+
+
+    button:hover,
+    nav *:hover,
+    a:hover {
+      cursor: auto;
     }
   }
 }
